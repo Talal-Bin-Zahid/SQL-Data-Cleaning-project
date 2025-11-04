@@ -1,7 +1,8 @@
 🧹 SQL Data Cleaning Project (PostgreSQL)
-👨‍💻 Author
-Dr. Talal Bin Zahid
+👨‍💻 Author : Dr. Talal Bin Zahid
+
 📅 Created on: 01-Nov-2025
+
 🔗 Project Type: Exploratory Data Cleaning (SQL)
 
 📘 Overview
