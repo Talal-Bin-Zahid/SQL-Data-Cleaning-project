@@ -7,42 +7,42 @@
 
 📘 Overview
 
-This project demonstrates a complete data cleaning workflow using SQL (PostgreSQL).
+. This project demonstrates a complete data cleaning workflow using SQL (PostgreSQL).
 
-The dataset used was sourced from Kaggle:
+. The dataset used was sourced from Kaggle:
 👉 Layoffs 2022 Dataset
 
-The objective was to clean, standardize, and prepare global tech layoff data (2022–2023) for accurate and reliable analysis.
+. The objective was to clean, standardize, and prepare global tech layoff data (2022–2023) for accurate and reliable analysis.
 
-All operations were carried out using pure SQL, emphasizing data integrity, reproducibility, and best practices in SQL-based data cleaning.
+. All operations were carried out using pure SQL, emphasizing data integrity, reproducibility, and best practices in SQL-based data cleaning.
 
 🧩 Workflow Steps
 
 1. Database & Table Setup
  
-Created a dedicated PostgreSQL database for the project.
+. Created a dedicated PostgreSQL database for the project.
 
-Defined the base table layoffs with appropriate schema.
+. Defined the base table layoffs with appropriate schema.
 
-Updated column data types for accuracy (e.g., funds_raised_millions → DECIMAL(10,2)).
+. Updated column data types for accuracy (e.g., funds_raised_millions → DECIMAL(10,2)).
 
 2. Staging Table Creation
    
-Created staging tables: layoffs_staging and layoffs_staging2 to preserve raw data integrity.
+. Created staging tables: layoffs_staging and layoffs_staging2 to preserve raw data integrity.
 
-Added a row_num column using ROW_NUMBER() for duplicate identification.
+. Added a row_num column using ROW_NUMBER() for duplicate identification.
 
 3. Duplicate Handling
 
-Detected duplicates using partitioning across all key attributes.
+. Detected duplicates using partitioning across all key attributes.
 
-Deleted rows with row_num > 1, ensuring unique and accurate records.
+. Deleted rows with row_num > 1, ensuring unique and accurate records.
 
 4. Data Standardization
  
-Trimmed extra spaces and unified inconsistent entries (industry, country, etc.).
+. Trimmed extra spaces and unified inconsistent entries (industry, country, etc.).
 
-Merged overlapping categories:
+. Merged overlapping categories:
 
 Example: "Crypto/Web3/Blockchain" → "Crypto".
 
@@ -52,34 +52,34 @@ Fixed inconsistent naming conventions:
 
 5. Null & Blank Value Treatment
  
-Replaced blank fields with NULL for consistency.
+. Replaced blank fields with NULL for consistency.
 
-Updated missing industry values by joining with non-null records of the same company.
+. Updated missing industry values by joining with non-null records of the same company.
 
-Removed records where both total_laid_off and percentage_laid_off were NULL.
+. Removed records where both total_laid_off and percentage_laid_off were NULL.
 
 6. Final Cleanup & Verification
 
-Dropped helper columns (e.g., row_num).
+. Dropped helper columns (e.g., row_num).
 
-Verified dataset consistency and integrity.
+. Verified dataset consistency and integrity.
 
-Ensured the cleaned dataset is fully analysis-ready.
+. Ensured the cleaned dataset is fully analysis-ready.
 
 🛠️ Tools & Technologies
 
-Database: PostgreSQL
+. Database: PostgreSQL
 
-Language: SQL
+. Language: SQL
 
-Dataset Source: Kaggle
+. Dataset Source: Kaggle
 
-Focus Areas: Data Cleaning, Transformation, Deduplication, Standardization
+. Focus Areas: Data Cleaning, Transformation, Deduplication, Standardization
 
 📈 Key Learning Outcomes
 
-Applying SQL techniques for real-world data cleaning challenges.
+. Applying SQL techniques for real-world data cleaning challenges.
 
-Managing missing values, duplicates, and inconsistent text data.
+. Managing missing values, duplicates, and inconsistent text data.
 
-Building reproducible and efficient SQL-based EDA workflows.
+. Building reproducible and efficient SQL-based EDA workflows.
