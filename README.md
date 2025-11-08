@@ -5,7 +5,7 @@
 
 📅 Created on: 01-Nov-2025
 
-🔗 Project Type: Exploratory Data Cleaning (SQL)
+🔗 Project Type:  Data Cleaning in SQL
 
 📘 Overview
 
